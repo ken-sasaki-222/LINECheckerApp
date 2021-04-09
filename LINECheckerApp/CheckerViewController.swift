@@ -104,6 +104,13 @@ class CheckerViewController: UIViewController {
             print("おじラインではありません")
         }
     }
+    
+    
+    // MARK: - ボタンアクション
+    // おじチェックボタンをタップすると呼ばれる
+    @IBAction func tapCheckerButton(_ sender: Any) {
+        print("チェック開始")
+    }
 }
 
 // 16進数color機能拡張

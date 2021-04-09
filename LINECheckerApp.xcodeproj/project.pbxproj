@@ -61,8 +61,8 @@
 				4505AC7D262023720007E706 /* CheckerViewController.swift */,
 				4505AC7F262023720007E706 /* Main.storyboard */,
 				4505AC82262023730007E706 /* Assets.xcassets */,
-				4505AC84262023730007E706 /* LaunchScreen.storyboard */,
 				4505AC87262023730007E706 /* Info.plist */,
+				4505AC84262023730007E706 /* LaunchScreen.storyboard */,
 			);
 			path = LINECheckerApp;
 			sourceTree = "<group>";
