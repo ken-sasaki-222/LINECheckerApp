@@ -36,8 +36,74 @@ class CheckerViewController: UIViewController {
         
         // NavigationBarの下線を削除
         self.navigationController?.navigationBar.shadowImage = UIImage()
+        
+        // キーボードにツールバーを反映
+        createKeyboardButton()
     }
-
+    
+    
+    // MARK: - キーボードにツールバーを追加
+    // "閉じる", "翻訳"ボタンをキーボードに追加
+    func createKeyboardButton() {
+        
+        // ツールバーを作成
+        let toolbar = UIToolbar()
+            toolbar.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 44)
+        
+        // 余白用アイテム
+        let flexibleItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        
+        // "閉じる"ボタンを作成
+        let doneButtonItem = UIBarButtonItem(title: "閉じる", style: UIBarButtonItem.Style.plain, target: self, action: #selector(closeKeyboard))
+        
+        // "クリア"ボタンを作成
+        let crearButtonItem = UIBarButtonItem(title: "クリア", style: UIBarButtonItem.Style.plain, target: self, action: #selector(clearKeyboard))
+        
+        // "チェック開始"ボタンを作成
+        let translationButtonItem = UIBarButtonItem(title: "チェック開始", style: UIBarButtonItem.Style.plain, target: self, action: #selector(doneKeyboard))
+        
+        // ツールバーにボタンを反映（閉じる, クリア, チェック開始）
+        toolbar.setItems([doneButtonItem, flexibleItem, crearButtonItem, flexibleItem, translationButtonItem], animated: true)
+        
+        // ツールバーを反映
+        textView.inputAccessoryView = toolbar
+    }
+    
+    
+    // MARK: - キーボードアクション
+    // Viewタップ閉じる
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        // キーボードを閉じる
+        self.view.endEditing(true)
+    }
+    
+    // キーボードの閉じるをタップすると呼ばれる
+    @objc func closeKeyboard() {
+        
+        // キーボードを閉じる
+        self.view.endEditing(true)
+    }
+    
+    // キーボードのクリアをタップすると呼ばれる
+    @objc func clearKeyboard() {
+        
+        // textViewをクリア
+        textView.text = ""
+    }
+    
+    // キーボードの完了をタップすると呼ばれる
+    @objc func doneKeyboard() {
+        
+        // キーボードを閉じる
+        self.view.endEditing(true)
+        
+        if textView.text.contains("😅") {
+            print("おじラインです")
+        } else {
+            print("おじラインではありません")
+        }
+    }
 }
 
 // 16進数color機能拡張
