@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--おじさんLINEチェッカー-->
+        <!--おじラインチェッカー-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CheckerViewController" customModule="LINECheckerApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,49 +17,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Eqn-t0-oo3">
-                                <rect key="frame" x="20" y="218" width="374" height="396"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Eqn-t0-oo3">
+                                <rect key="frame" x="20" y="198" width="374" height="396"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="396" id="b1Z-kK-ncx"/>
-                                    <constraint firstAttribute="width" constant="374" id="zLY-fP-O7V"/>
-                                </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="yes" spellCheckingType="yes"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="▼入力箇所" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCU-Fh-QOH">
-                                <rect key="frame" x="22" y="191" width="68" height="17"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="68" id="KZe-gx-tGE"/>
-                                    <constraint firstAttribute="height" constant="17" id="qDt-vM-ATq"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="▼入力箇所" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCU-Fh-QOH">
+                                <rect key="frame" x="22" y="171" width="68" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QV7-wy-BzA">
-                                <rect key="frame" x="117" y="659" width="180" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QV7-wy-BzA">
+                                <rect key="frame" x="117" y="639" width="180" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.80392156862745101" green="0.52156862745098043" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="YGS-N3-zYk"/>
-                                    <constraint firstAttribute="width" constant="180" id="mVc-KN-tt3"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <state key="normal" title="おじチェック開始">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
                                     <action selector="tapCheckerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PkT-QY-jQ1"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="テキストを入力するかペーストしてください" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vC-c2-h0H">
-                                <rect key="frame" x="20" y="127" width="374" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="2S6-91-wp2"/>
-                                    <constraint firstAttribute="width" constant="374" id="eMF-ot-yyg"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="絵文字込みでテキストを入力してください" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vC-c2-h0H">
+                                <rect key="frame" x="52" y="128" width="311" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -67,23 +55,8 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="QV7-wy-BzA" firstAttribute="top" secondItem="Eqn-t0-oo3" secondAttribute="bottom" constant="45" id="5jN-Qg-Xtf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QV7-wy-BzA" secondAttribute="trailing" constant="117" id="8s6-uF-F96"/>
-                            <constraint firstItem="Eqn-t0-oo3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="A4J-68-qW3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3vC-c2-h0H" secondAttribute="trailing" constant="20" id="HYu-Zv-sAa"/>
-                            <constraint firstItem="yCU-Fh-QOH" firstAttribute="top" secondItem="3vC-c2-h0H" secondAttribute="bottom" constant="24" id="MAD-Gg-5NP"/>
-                            <constraint firstItem="yCU-Fh-QOH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="Ocy-nX-lA9"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eqn-t0-oo3" secondAttribute="trailing" constant="20" id="R97-xU-I7i"/>
-                            <constraint firstItem="Eqn-t0-oo3" firstAttribute="top" secondItem="yCU-Fh-QOH" secondAttribute="bottom" constant="10" id="Tsg-DC-7A7"/>
-                            <constraint firstItem="QV7-wy-BzA" firstAttribute="top" secondItem="Eqn-t0-oo3" secondAttribute="bottom" constant="45" id="WdI-tv-GIZ"/>
-                            <constraint firstItem="Eqn-t0-oo3" firstAttribute="top" secondItem="yCU-Fh-QOH" secondAttribute="bottom" constant="10" id="YkH-46-Mio"/>
-                            <constraint firstItem="QV7-wy-BzA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="117" id="aHZ-qx-Cfe"/>
-                            <constraint firstItem="3vC-c2-h0H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="dr8-ec-WfC"/>
-                            <constraint firstItem="3vC-c2-h0H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eHk-gZ-lrQ"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="おじさんLINEチェッカー" id="fBt-G5-UFM"/>
+                    <navigationItem key="navigationItem" title="おじラインチェッカー" id="fBt-G5-UFM"/>
                     <connections>
                         <outlet property="checkerButton" destination="QV7-wy-BzA" id="yr3-Sr-u4k"/>
                         <outlet property="textView" destination="Eqn-t0-oo3" id="U6C-gt-kBn"/>
@@ -104,7 +77,7 @@
                         <color key="barTintColor" red="0.80392156862745101" green="0.52156862745098043" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" systemColor="labelColor"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
