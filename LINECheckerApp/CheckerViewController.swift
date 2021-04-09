@@ -16,9 +16,12 @@ class CheckerViewController: UIViewController {
     
     // チェック開始ボタンのインスタンス
     @IBOutlet weak var checkerButton: UIButton!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // ダークモード適用を回避
+        self.overrideUserInterfaceStyle = .light
         
         // textViewの化粧
         textView.backgroundColor   = .systemBackground
@@ -48,7 +51,7 @@ class CheckerViewController: UIViewController {
         
         // ツールバーを作成
         let toolbar = UIToolbar()
-            toolbar.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 44)
+        toolbar.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 44)
         
         // 余白用アイテム
         let flexibleItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
@@ -112,11 +115,15 @@ class CheckerViewController: UIViewController {
             
             // アラートの表示
             present(alert, animated: true, completion: nil)
+            
+        } else if textView.text == "" {
+            
+            print("何もしない")
         } else {
             // アラートのインスタンス
             let alert = EMAlertController(icon   : UIImage(named: "おじさん2"),
                                           title  : "おじラインではありません",
-                                          message: "あなたの送信内容はおじラインではありません！")
+                                          message: "あなたの送信内容は \n おじラインではありません！")
             
             // アラートのアクションを設定しアラートを追加
             let doneAction = EMAlertAction(title: "閉じる", style: .normal)
@@ -146,11 +153,14 @@ class CheckerViewController: UIViewController {
             
             // アラートの表示
             present(alert, animated: true, completion: nil)
+        } else if textView.text == "" {
+            
+            print("何もしない")
         } else {
             // アラートのインスタンス
             let alert = EMAlertController(icon   : UIImage(named: "おじさん2"),
                                           title  : "おじラインではありません",
-                                          message: "あなたの送信内容はおじラインではありません！")
+                                          message: "あなたの送信内容は \n おじラインではありません！")
             
             // アラートのアクションを設定しアラートを追加
             let doneAction = EMAlertAction(title: "閉じる", style: .normal)
