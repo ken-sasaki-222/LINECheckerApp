@@ -1,0 +1,6 @@
+framework module Pods_LINECheckerApp {
+  umbrella header "Pods-LINECheckerApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

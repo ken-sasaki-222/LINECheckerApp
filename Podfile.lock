@@ -1,0 +1,16 @@
+PODS:
+  - EMAlertController (1.0.2)
+
+DEPENDENCIES:
+  - EMAlertController
+
+SPEC REPOS:
+  trunk:
+    - EMAlertController
+
+SPEC CHECKSUMS:
+  EMAlertController: 471e4630309e5ae843ef71f502d6b58525b22c60
+
+PODFILE CHECKSUM: d9e9204cfd54eb76024122725bd14a61c7969a7b
+
+COCOAPODS: 1.10.1
