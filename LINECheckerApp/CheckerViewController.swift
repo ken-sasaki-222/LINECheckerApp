@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import EMAlertController
 
 class CheckerViewController: UIViewController {
     
@@ -15,7 +16,6 @@ class CheckerViewController: UIViewController {
     
     // チェック開始ボタンのインスタンス
     @IBOutlet weak var checkerButton: UIButton!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,10 +98,32 @@ class CheckerViewController: UIViewController {
         // キーボードを閉じる
         self.view.endEditing(true)
         
-        if textView.text.contains("😅") {
-            print("おじラインです")
+        // 特定の絵文字が存在すれば...で分岐
+        if textView.text.contains("😅") || textView.text.contains("😓") || textView.text.contains("😄") || textView.text.contains("😁") || textView.text.contains("😃") || textView.text.contains("😚") || textView.text.contains("❓") || textView.text.contains("❗️") || textView.text.contains("😊") || textView.text.contains("💦") || textView.text.contains("😥") || textView.text.contains("‼️") || textView.text.contains("⁉️") {
+            
+            // アラートのインスタンス
+            let alert = EMAlertController(icon   : UIImage(named: "おじさん1"),
+                                          title  : "おじラインです",
+                                          message: "あなたの送信内容はおじラインです。 \n それじゃモテませんよ？")
+            
+            // アラートのアクションを設定しアラートを追加
+            let doneAction = EMAlertAction(title: "閉じる", style: .normal)
+            alert.addAction(doneAction)
+            
+            // アラートの表示
+            present(alert, animated: true, completion: nil)
         } else {
-            print("おじラインではありません")
+            // アラートのインスタンス
+            let alert = EMAlertController(icon   : UIImage(named: "おじさん2"),
+                                          title  : "おじラインではありません",
+                                          message: "あなたの送信内容はおじラインではありません！")
+            
+            // アラートのアクションを設定しアラートを追加
+            let doneAction = EMAlertAction(title: "閉じる", style: .normal)
+            alert.addAction(doneAction)
+            
+            // アラートの表示
+            present(alert, animated: true, completion: nil)
         }
     }
     
@@ -109,10 +131,39 @@ class CheckerViewController: UIViewController {
     // MARK: - ボタンアクション
     // おじチェックボタンをタップすると呼ばれる
     @IBAction func tapCheckerButton(_ sender: Any) {
-        print("チェック開始")
+        
+        // 特定の絵文字が存在すれば...で分岐
+        if textView.text.contains("😅") || textView.text.contains("😓") || textView.text.contains("😄") || textView.text.contains("😁") || textView.text.contains("😃") || textView.text.contains("😚") || textView.text.contains("❓") || textView.text.contains("❗️") || textView.text.contains("😊") || textView.text.contains("💦") || textView.text.contains("😥") || textView.text.contains("‼️") || textView.text.contains("⁉️") {
+            
+            // アラートのインスタンス
+            let alert = EMAlertController(icon   : UIImage(named: "おじさん1"),
+                                          title  : "おじラインです",
+                                          message: "あなたの送信内容はおじラインです。 \n それじゃモテませんよ？")
+            
+            // アラートのアクションを設定しアラートを追加
+            let doneAction = EMAlertAction(title: "閉じる", style: .normal)
+            alert.addAction(doneAction)
+            
+            // アラートの表示
+            present(alert, animated: true, completion: nil)
+        } else {
+            // アラートのインスタンス
+            let alert = EMAlertController(icon   : UIImage(named: "おじさん2"),
+                                          title  : "おじラインではありません",
+                                          message: "あなたの送信内容はおじラインではありません！")
+            
+            // アラートのアクションを設定しアラートを追加
+            let doneAction = EMAlertAction(title: "閉じる", style: .normal)
+            alert.addAction(doneAction)
+            
+            // アラートの表示
+            present(alert, animated: true, completion: nil)
+        }
     }
 }
 
+
+// MARK: - Extension
 // 16進数color機能拡張
 extension UIColor {
     convenience init(hex: String, alpha: CGFloat = 1.0) {
