@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -56,7 +56,6 @@
 				0BD288AD06964385C45E34DD /* Pods-LINECheckerApp.debug.xcconfig */,
 				775FF9529CEF9A3C7FBF38AF /* Pods-LINECheckerApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
